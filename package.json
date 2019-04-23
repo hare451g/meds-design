@@ -1,0 +1,15 @@
+{
+  "name": "meds-design",
+  "version": "1.0.0",
+  "description": "design inspired by paracetamol, build using scss and node-sass",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-scss": "node-sass --include-path src/scss/ src/scss/base.scss dist/meds.css --output-style compressed"
+  },
+  "author": "hendra 'hare' sadewa",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.11.0"
+  }
+}

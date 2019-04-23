@@ -1,0 +1,10 @@
+@each $state, $value in map-get($colors, 'states') {
+  // text color
+  .text-#{$state} {
+    color: #{$value};
+  }
+  // background color
+  .bg-#{$state} {
+    background-color: #{$value};
+  }
+}

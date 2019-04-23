@@ -1,0 +1,27 @@
+button {
+  margin: 4px 2px;
+  padding: 12px 24px;
+  border-radius: 4px;
+  box-shadow: none;
+  font-weight: 600;
+  font-size: $font-base-size;
+  border: 1px solid $color-foreground;
+  
+  @each $state, $value in map-get($colors, 'states') {
+    &.#{$state} {
+      color: $color-foreground;
+      background-color: #{$value};
+    }
+
+    &.outline.#{$state} {
+      padding: 12px 22px;
+      border: 2px solid #{$value};
+      background-color: rgba($color: #ffffff, $alpha: 0);
+      color: #{$value};
+    }
+    
+  }
+  &.block {
+    width: 100%;
+  }
+}

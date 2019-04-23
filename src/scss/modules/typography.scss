@@ -1,0 +1,58 @@
+// body text
+body {
+  font-size: $font-base-size;
+  font-family: $font-sans-serif;
+  color: $color-foreground;
+}
+
+// display text
+@for $i from 1 through 4 {
+  h1.display-#{$i} {
+    font-size: calc(#{$font-base-size} * (#{$font-scale-ratio} * #{$i}))
+  }
+}
+
+article {
+  font-family: $font-sans-serif;
+   > p {
+    font-size: $font-base-size * 1.2;
+    line-height: $font-base-size * 1.45;
+    margin: 2em 0px;
+  }
+  
+  & > p.serif {
+    font-family: $font-serif;
+    margin: 2em 0px;
+  }
+
+  & > ul,
+  & > * ul {
+    > li {
+      font-size: $font-base-size * 1.2;
+      line-height: $font-base-size * 1.45;
+    }
+    > li.unstyled {
+      list-style: none;
+    }
+  }
+
+  & > blockquote,
+  & > * blockquote {
+    border-left: 0.25em solid $color-primary;
+    padding-left: 1em;
+    & > p {
+      line-height: $font-base-size * 1.25;
+      font-weight: 500;
+      font-size: $font-base-size * 1.6;
+    }
+    & > footer {
+      font-weight: 200;
+      font-size: $font-base-size * 1.25;
+      color: $color-muted;
+      &:before {
+        color: $color-muted;
+        content: "\2014"
+      }
+    }
+  }
+}

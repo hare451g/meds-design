@@ -1,0 +1,35 @@
+// Font Stacks
+$font-sans-serif: Helvetica, 'Roboto', sans-serif;
+$font-serif: 'Raleway', serif;
+
+$font-base-size: 1em;
+$font-scale-ratio: 1.2;
+
+// Colors
+$color-primary: #adf4cf;
+$color-secondary: #ffcdf3;
+$color-info: #9BF7EE;
+$color-warning: #fad239;
+$color-error: #f45092;
+$color-success: #adf4cf;
+$color-background: #f7f7f7;
+$color-foreground: #333333;
+$color-muted: #5a5a5a;
+
+$colors: (
+  brand: (
+    primary: $color-primary,
+    secondary: $color-secondary,
+  ),
+  states: (
+    info: $color-info,
+    warning: $color-warning,
+    error: $color-error,
+    success: $color-success,
+    muted: $color-muted,
+  ),
+  text: (
+    dark: $color-foreground,
+    base: $color-foreground,
+  )
+)
